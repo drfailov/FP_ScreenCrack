@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:longClickable="false" android:background="#223035"
+              android:baselineAligned="false" android:orientation="vertical">
+
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_gravity="center_horizontal">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/app_name"
+                    android:id="@+id/textView5" android:layout_gravity="center_horizontal"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/app_version"
+                    android:id="@+id/textView14" android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+    </FrameLayout>
+    <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/scrollView" android:layout_weight="1" android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+                android:baselineAligned="false" android:orientation="vertical">
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:id="@+id/llMAIN" android:visibility="visible">
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" android:id="@+id/llPREVIEW" android:visibility="visible">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Предпросмотр трещины"
+                            android:id="@+id/textView" android:textColor="#ffffff" android:layout_marginLeft="20dp"
+                            android:textStyle="bold"/>
+                    <FrameLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="400dp">
+                        <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" android:background="#222222">
+                            <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="fill_parent"
+                                    android:id="@+id/previewView" android:layout_gravity="center_horizontal" android:minHeight="100dp"
+                                    android:background="#333333" android:layout_marginLeft="30dp" android:layout_marginRight="30dp"
+                                    android:minWidth="200dp" android:layout_centerHorizontal="true"
+                                    android:scaleType="centerInside" android:adjustViewBounds="true"/>
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:text='Для предпросмотра нажмите кнопку "Генерировать"'
+                                    android:id="@+id/textPreviewNotReady"
+                                    android:gravity="center"
+                                    android:layout_centerVertical="true" android:layout_centerHorizontal="true"/>
+                        </RelativeLayout>
+                    </FrameLayout>
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" android:gravity="center_horizontal">
+                        <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Генерировать"
+                                android:id="@+id/buttonGenerate" android:layout_gravity="center_horizontal"
+                                />
+                        <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Сохранить"
+                                android:id="@+id/buttonSave"/>
+                        <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Открыть"
+                                android:id="@+id/buttonOpen"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" android:id="@+id/llFULLSCREEN" android:visibility="visible">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Полноэкранный режим"
+                            android:id="@+id/textView2" android:layout_marginLeft="20dp" android:layout_marginTop="10dp"
+                            android:textStyle="bold"/>
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        <Button
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Запустить"
+                                android:layout_weight="1" android:background="#99ffaa"
+                                android:paddingTop="20dp" android:paddingBottom="20dp"
+                                android:layout_marginRight="10dp" android:id="@+id/startServiceButton" android:textStyle="bold"
+                                android:layout_marginLeft="10dp"/>
+                        <Button android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Остановить"
+                                android:layout_weight="1" android:background="#ffaa99" android:paddingTop="20dp"
+                                android:paddingBottom="20dp" android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+                                android:id="@+id/stopServiceButton" android:textStyle="bold"/>
+                    </LinearLayout>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Перед запуском рекомендуется отключить автоповорот экрана! Он вызывает ошибку."
+                            android:id="@+id/textView15" android:textColor="#FF5533"
+                            android:textAppearance="?android:attr/textAppearanceMedium" android:password="false"
+                            android:textStyle="bold"/>
+                </LinearLayout>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Настройки трещины"
+                        android:id="@+id/textView3" android:layout_marginLeft="20dp" android:layout_marginTop="10dp"
+                        android:textStyle="bold"/>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" android:id="@+id/llCRACKTYPE" android:visibility="visible">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Тип трещины"
+                            android:id="@+id/textView4"/>
+                    <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:layout_marginLeft="20dp">
+                        <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Удар в точку"
+                                android:id="@+id/radioButtonCrackPoint" android:checked="false"/>
+                        <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Падение с высоты"
+                                android:id="@+id/radioButtonCrackFall" android:layout_gravity="center_horizontal"
+                                android:checked="true"/>
+                        <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Перелом пополам"
+                                android:id="@+id/radioButtonCrackTwice"/>
+                    </RadioGroup>
+                </LinearLayout>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" android:id="@+id/llDISPLAYTYPE" android:visibility="visible">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:textAppearance="?android:attr/textAppearanceMedium" android:text="Технология дисплея"
+                              android:id="@+id/textView6"/>
+                    <RadioGroup android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp" android:id="@+id/radioGroup">
+                        <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                     android:text="Тачскрин" android:id="@+id/radioButtonIndestructible"/>
+                        <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                     android:text="IPS матрица" android:id="@+id/radioButtonIPS" android:checked="true"/>
+                        <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                     android:text="TFT матрица" android:id="@+id/radioButtonTFT"
+                                     android:checked="false"/>
+                        <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                     android:text="TFT матрица(1)" android:id="@+id/radioButtonTFT1" android:checked="false"/>
+                        <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                     android:text="OLED матрица" android:id="@+id/radioButtonOLED"/>
+                    </RadioGroup>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent"
+                              android:layout_height="fill_parent" android:id="@+id/llCHIPPOSITION"
+                              android:visibility="visible">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:textAppearance="?android:attr/textAppearanceMedium"
+                              android:text="Расположение контроллера дисплея" android:id="@+id/textView8"/>
+                    <RadioGroup android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp" android:id="@+id/radioGroup3">
+                        <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                     android:text="Над экраном" android:id="@+id/radioButtonChipTop"
+                                     android:checked="false"/>
+                        <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                     android:text="Под экраном" android:id="@+id/radioButtonChipBottom"
+                                     android:checked="true"/>
+                    </RadioGroup>
+                </LinearLayout>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" android:id="@+id/llCRACKPOSITION" android:visibility="visible">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Расположение трещины"
+                            android:id="@+id/textView7"/>
+                    <RadioGroup android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp" android:id="@+id/radioGroup2">
+                        <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                     android:text="Верхняя часть экрана" android:id="@+id/radioButtonCrackTop"
+                                     android:checked="true"/>
+                        <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                     android:text="Нижняя часть экрана" android:id="@+id/radioButtonCrackBottom" android:checked="false"/>
+                    </RadioGroup>
+                </LinearLayout>
+                <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Отображать дополнительные настройки"
+                        android:id="@+id/checkBoxOptional"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:id="@+id/llOPTIONAL">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:textAppearance="?android:attr/textAppearanceMedium" android:text="Дополнительные настройки"
+                          android:id="@+id/textView11" android:layout_marginLeft="20dp" android:layout_marginTop="10dp"
+                          android:textStyle="bold"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent"
+                              android:layout_height="fill_parent" android:id="@+id/llSPOTSIZE"
+                              android:layout_marginTop="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:textAppearance="?android:attr/textAppearanceMedium" android:text="Размер пятен"
+                              android:id="@+id/textView17"/>
+                    <SeekBar android:layout_width="match_parent" android:layout_height="wrap_content"
+                             android:id="@+id/seekBarSpotSize" android:layout_gravity="center_horizontal"
+                             android:max="400" android:progress="1" android:longClickable="false"
+                             android:indeterminate="false"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:textAppearance="?android:attr/textAppearanceSmall" android:text="1"
+                              android:id="@+id/textViewSpotSize" android:layout_gravity="right"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent"
+                              android:layout_height="fill_parent" android:id="@+id/llCRACKLENGTH"
+                              android:layout_marginTop="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:textAppearance="?android:attr/textAppearanceMedium"
+                              android:text="Длина трещин" android:id="@+id/textView9"/>
+                    <SeekBar
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/seekBarCrackLenght" android:layout_gravity="center_horizontal"
+                            android:max="10" android:progress="1"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="1"
+                            android:id="@+id/textViewCrackLength" android:layout_gravity="right"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent"
+                              android:layout_height="fill_parent" android:id="@+id/llCRACKSTRONG"
+                              android:layout_marginTop="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:textAppearance="?android:attr/textAppearanceMedium"
+                              android:text="Толщина трещин" android:id="@+id/textView12"/>
+                    <SeekBar android:layout_width="match_parent" android:layout_height="wrap_content"
+                             android:id="@+id/seekBarCrackWidth" android:layout_gravity="center_horizontal"
+                             android:max="215" android:progress="1" android:longClickable="false"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:textAppearance="?android:attr/textAppearanceSmall" android:text="1"
+                              android:id="@+id/textViewCrackWidth" android:layout_gravity="right"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent"
+                              android:layout_height="fill_parent" android:id="@+id/llCRACKCOUNT"
+                              android:layout_marginTop="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:textAppearance="?android:attr/textAppearanceMedium"
+                              android:text="Количество трещин" android:id="@+id/textView13"/>
+                    <SeekBar android:layout_width="match_parent" android:layout_height="wrap_content"
+                             android:id="@+id/seekBarCrackCount" android:layout_gravity="center_horizontal"
+                             android:max="100" android:progress="1" android:longClickable="false"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:textAppearance="?android:attr/textAppearanceSmall" android:text="1"
+                              android:id="@+id/textViewCrackCount" android:layout_gravity="right"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent"
+                              android:layout_height="fill_parent" android:id="@+id/llCONNECTIONDURABILITY"
+                              android:layout_marginTop="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:textAppearance="?android:attr/textAppearanceMedium"
+                              android:text="Прочность соединений" android:id="@+id/textView16"/>
+                    <SeekBar android:layout_width="match_parent" android:layout_height="wrap_content"
+                             android:id="@+id/seekBarConnectionDurability" android:layout_gravity="center_horizontal"
+                             android:max="255" android:progress="1" android:longClickable="false"
+                             android:indeterminate="false"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:textAppearance="?android:attr/textAppearanceSmall" android:text="1"
+                              android:id="@+id/textViewConnectionDurability" android:layout_gravity="right"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent"
+                              android:layout_height="fill_parent" android:id="@+id/llCRACKTORTUOSITY"
+                              android:layout_marginTop="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:textAppearance="?android:attr/textAppearanceMedium" android:text="Извилистость трещин"
+                              android:id="@+id/textView10"/>
+                    <SeekBar android:layout_width="match_parent" android:layout_height="wrap_content"
+                             android:id="@+id/seekBarCrackTortuosity" android:layout_gravity="center_horizontal"
+                             android:max="50" android:progress="1" android:longClickable="false"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                              android:textAppearance="?android:attr/textAppearanceSmall" android:text="1"
+                              android:id="@+id/textViewCrackTortuosity" android:layout_gravity="right"/>
+                </LinearLayout>
+                <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Разрешить пересечения"
+                        android:id="@+id/checkBoxAllowIntersections"/>
+                <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:id="@+id/checkBoxDrawSpots"
+                          android:checked="true" android:text="Рисовать пятна"/>
+                <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Взаимодействие с соседними трещинами"
+                        android:id="@+id/checkBoxCrackNeighbours" android:checked="true"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
